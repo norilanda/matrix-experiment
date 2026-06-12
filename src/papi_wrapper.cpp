@@ -18,10 +18,10 @@ bool papi_init() {
         return false;
     }
 
-    // Add Level 2 Total Cache Misses event
-    retval = PAPI_add_event(EventSet, PAPI_L2_TCM);
+    // Add Level 2 Data Cache Misses event
+    retval = PAPI_add_event(EventSet, PAPI_L2_DCM);
     if (retval != PAPI_OK) {
-        std::cerr << "PAPI add event PAPI_L2_TCM error: " << PAPI_strerror(retval) << "\n";
+        std::cerr << "PAPI add event PAPI_L2_DCM error: " << PAPI_strerror(retval) << "\n";
         return false;
     }
     
