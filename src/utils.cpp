@@ -14,23 +14,3 @@ std::vector<int> generate_random_matrix(int N) {
     
     return matrix;
 }
-
-bool verify_transpose(const std::vector<int>& expected, const std::vector<int>& actual, int N) {
-    if (expected.size() != actual.size()) {
-        return false;
-    }
-        
-    for (int i = 0; i < N; ++i)
-    {
-        for (int j = 0; j < N; ++j)
-        {
-            int index = i * N + j;
-
-            if (expected[index] != actual[index]) {
-                return false;
-            }
-        }
-    }
-    
-    return true;
-}
